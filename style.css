@@ -1,0 +1,119 @@
+/* ───────── RSA-inspired tokens: white, black, gray, red ───────── */
+:root {
+  --red: #d6001c;
+  --red-dark: #a30015;
+  --black: #000000;
+  --ink: #16161a;
+  --g1: #f5f5f6;
+  --g2: #e4e4e7;
+  --g3: #b4b5bb;
+  --g4: #6a6c74;
+  --slidev-theme-primary: var(--red);
+}
+html, body { background: #fff; }
+
+.slidev-layout {
+  background: #fff;
+  color: var(--ink);
+  padding: 1.6rem 2.6rem 2.4rem;
+  font-size: 1.2rem;
+  line-height: 1.4;
+}
+.slidev-layout h1 {
+  font-family: 'Archivo', 'IBM Plex Sans', sans-serif;
+  font-size: 2.3rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  margin: 0 0 1.1rem;
+  padding-bottom: 0.7rem;
+  position: relative;
+}
+.slidev-layout h1::after {
+  content: ''; position: absolute; left: 0; bottom: 0;
+  width: 54px; height: 5px; background: var(--red);
+}
+.slidev-layout h2 { font-family: 'Archivo', sans-serif; font-size: 1.45rem; font-weight: 700; margin: 0 0 .35rem; }
+.slidev-layout h3 { font-family: 'Archivo', sans-serif; font-size: 1.25rem; font-weight: 700; margin: 0 0 .25rem; }
+.slidev-layout a { color: var(--red); border: 0; }
+.slidev-layout li::marker { color: var(--red); }
+.slidev-layout ul { padding-left: 1.2rem; }
+.slidev-layout li { margin: .25rem 0; }
+.slidev-layout code:not(pre code) { background: var(--g1); color: var(--red-dark); padding: 1px 6px; border-radius: 3px; font-size: .85em; }
+.slidev-layout table { border-collapse: collapse; width: 100%; font-size: 1.05rem; margin: .3rem 0; }
+.slidev-layout th { background: var(--black); color: #fff; text-align: left; font-weight: 600; padding: .45rem .7rem; }
+.slidev-layout td { border-bottom: 1px solid var(--g2); padding: .4rem .7rem; }
+.slidev-layout tr:nth-child(even) td { background: var(--g1); }
+.slidev-layout pre { border-radius: 4px !important; font-size: .95rem !important; line-height: 1.4 !important; }
+.red { color: var(--red); }
+.muted { color: var(--g4); }
+.lead { font-size: 1.4rem; line-height: 1.35; }
+
+/* ───────── building blocks ───────── */
+.card { border: 1px solid var(--g2); border-radius: 4px; padding: .8rem 1rem; background: #fff; font-size: 1.1rem; line-height: 1.35; }
+.card.r { border-top: 4px solid var(--red); }
+.card.k { background: var(--black); color: #fff; border-color: var(--black); }
+.card.k h2, .card.k h3 { color: #fff; }
+.card.g { background: var(--g1); border-color: var(--g1); }
+.card p { margin: .2rem 0; }
+.card h2, .card h3 { margin-bottom: .3rem; }
+.tag { display: inline-block; font-size: .95rem; padding: 2px 11px; border: 1px solid var(--g3); border-radius: 99px; margin: 3px 4px 3px 0; color: #2a2b30; }
+.tag.r { background: var(--red); border-color: var(--red); color: #fff; }
+.card.k .tag { border-color: #4a4b52; color: #d8d9dd; }
+.kpis { display: grid; grid-auto-flow: column; gap: 1rem; }
+.kpi { border-left: 5px solid var(--red); padding: .1rem .9rem; }
+.kpi b { display: block; font-family: 'Archivo', sans-serif; font-size: 2.6rem; line-height: 1; }
+.kpi span { font-size: 1rem; color: var(--g4); }
+.note { border-left: 4px solid var(--red); background: var(--g1); padding: .55rem .9rem; font-size: 1.05rem; margin-top: .9rem; }
+
+/* flow diagrams: boxes joined by red arrows */
+.flow { display: flex; align-items: stretch; gap: 1.5rem; }
+.flow > div { position: relative; flex: 1; padding: .8rem .8rem; border: 1px solid var(--g3); background: #fff; font-size: 1rem; line-height: 1.3; text-align: center; border-radius: 4px; }
+.flow > div b { display: block; font-family: 'Archivo', sans-serif; font-size: 1.2rem; margin-bottom: .25rem; }
+.flow > div:not(:last-child)::after {
+  content: ''; position: absolute; right: -1.2rem; top: 50%; transform: translateY(-50%);
+  border-left: .7rem solid var(--red); border-top: .45rem solid transparent; border-bottom: .45rem solid transparent;
+}
+.flow > div.hot { background: var(--black); color: #fff; border-color: var(--black); }
+.flow > div.bad { background: var(--red); color: #fff; border-color: var(--red); }
+.flow > div .n { display: inline-grid; place-items: center; width: 1.7rem; height: 1.7rem; border-radius: 50%; background: var(--red); color: #fff; font-size: .95rem; font-weight: 700; margin-bottom: .3rem; }
+.flow.v { flex-direction: column; gap: 1.3rem; }
+.flow.v > div:not(:last-child)::after {
+  right: auto; left: 50%; top: auto; bottom: -1.1rem; transform: translateX(-50%);
+  border-left: .45rem solid transparent; border-right: .45rem solid transparent; border-top: .7rem solid var(--red); border-bottom: 0;
+}
+.loopback { border: 2px dashed var(--red); border-top: none; border-radius: 0 0 10px 10px; text-align: center; padding: .45rem; margin: .4rem 3rem 0; color: var(--red); font-weight: 600; font-size: 1.05rem; }
+
+/* numbered step grid (checklists) */
+.steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: .7rem; }
+.steps > div { border: 1px solid var(--g3); border-left: 5px solid var(--red); padding: .55rem .8rem; font-size: 1.05rem; line-height: 1.3; border-radius: 3px; }
+.steps > div b { color: var(--red); font-family: 'Archivo', sans-serif; margin-right: .3rem; }
+
+/* click reveals: quieter than the default */
+.slidev-vclick-target { transition: opacity .4s ease, transform .4s cubic-bezier(.2,.8,.2,1); }
+.slidev-vclick-hidden { transform: translateY(8px); }
+
+/* ───────── custom slide transitions ───────── */
+.rsa-wipe-enter-active, .rsa-wipe-leave-active { transition: clip-path .85s cubic-bezier(.7,0,.2,1), filter .85s; }
+.rsa-wipe-enter-active { z-index: 2; }
+.rsa-wipe-enter-from { clip-path: inset(0 100% 0 0); }
+.rsa-wipe-enter-to { clip-path: inset(0 0 0 0); }
+.rsa-wipe-leave-to { filter: brightness(.35); }
+
+.rsa-slash-enter-active, .rsa-slash-leave-active { transition: clip-path .8s cubic-bezier(.65,0,.25,1), opacity .8s; }
+.rsa-slash-enter-active { z-index: 2; }
+.rsa-slash-enter-from { clip-path: polygon(0 0, 0 0, -30% 100%, -30% 100%); }
+.rsa-slash-enter-to { clip-path: polygon(0 0, 130% 0, 100% 100%, -30% 100%); }
+.rsa-slash-leave-to { opacity: .2; }
+
+.rsa-zoom-enter-active, .rsa-zoom-leave-active { transition: opacity .55s ease, transform .55s cubic-bezier(.2,.8,.2,1), filter .55s; }
+.rsa-zoom-enter-from { opacity: 0; transform: scale(1.1); filter: blur(10px); }
+.rsa-zoom-leave-to { opacity: 0; transform: scale(.92); filter: blur(10px); }
+
+.rsa-flip-enter-active, .rsa-flip-leave-active { transition: transform .7s cubic-bezier(.5,0,.2,1), opacity .7s; backface-visibility: hidden; }
+.rsa-flip-enter-from { transform: perspective(1800px) rotateY(-80deg); opacity: 0; transform-origin: left center; }
+.rsa-flip-leave-to { transform: perspective(1800px) rotateY(80deg); opacity: 0; transform-origin: right center; }
+
+@media (prefers-reduced-motion: reduce) {
+  [class*='rsa-'][class*='-active'] { transition-duration: .01s !important; }
+}
