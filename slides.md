@@ -1,6 +1,6 @@
 ---
 theme: default
-title: RSA Governance & Lifecycle - From Theory to Hands-On
+title: RSA Governance & Lifecycle
 colorSchema: light
 transition: slide-left
 mdc: true
@@ -14,14 +14,13 @@ fonts:
 layout: rsa-cover
 ---
 
+<div class="pip"></div>
+
 # RSA Governance & Lifecycle
 
-<div class="rule"></div>
+<p class="credit"><b>Presented by:<br></b> Omar Montaser<br>Omar Tarek<br>Salma Moussa<br>Nour Essam<br>Sohile Ebrahim<br>Mohamed Fotoh</p>
 
-<p class="sub">Eight topics, each told as concept, lab, and lesson: who has access to what, and how we keep it right.</p>
-
-<div class="meta">Your name &nbsp;|&nbsp; Your university &nbsp;|&nbsp; Date</div>
-<div class="hint">Space or arrow keys to move. Press O for the slide overview.</div>
+<p class="credit"><b>Submitted to</b> Dr. Mohamed Sobh</p>
 
 ---
 src: ./pages/01-overview.md

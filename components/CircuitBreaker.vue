@@ -7,8 +7,8 @@ const first = ref(false)
 const aborted = computed(() => changed.value > threshold.value && !ignore.value && !first.value)
 const presets = [
   { label: 'Routine run', c: 1, ig: false, fr: false },
-  { label: 'Mis-mapped email (lab)', c: 100, ig: false, fr: false },
-  { label: 'Fixed mapping, override on', c: 100, ig: true, fr: false },
+  { label: 'Bulk change', c: 100, ig: false, fr: false },
+  { label: 'Bulk change, override on', c: 100, ig: true, fr: false },
   { label: 'First run of a collector', c: 100, ig: false, fr: true },
 ]
 const apply = (p: (typeof presets)[number]) => { changed.value = p.c; ignore.value = p.ig; first.value = p.fr }
