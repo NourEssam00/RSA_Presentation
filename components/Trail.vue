@@ -1,6 +1,6 @@
 <script setup lang="ts">
 defineProps<{ at: number }>()
-const topics = ['Foundations', 'Collectors', 'Analytics', 'Reviews', 'Rules', 'Roles', 'Requests', 'Diagnostics']
+const topics = ['Why governance', 'Foundations', 'Collectors', 'Analytics', 'Reviews', 'Rules', 'Roles', 'Requests', 'Diagnostics', 'Takeaways']
 </script>
 <template>
   <div class="trail">
@@ -10,8 +10,8 @@ const topics = ['Foundations', 'Collectors', 'Analytics', 'Reviews', 'Rules', 'R
   </div>
 </template>
 <style scoped>
-.trail { display: flex; flex-wrap: wrap; gap: .5rem; margin-top: 1.6rem; }
-span { display: inline-flex; align-items: center; gap: .45rem; font-size: 1rem; padding: .3rem .8rem .3rem .4rem; border: 1px solid #4a4b52; border-radius: 99px; color: #8a8c93; }
+.trail { display: flex; flex-wrap: wrap; gap: .45rem; margin-top: 1.6rem; max-width: 52rem; }
+span { display: inline-flex; align-items: center; gap: .4rem; font-size: .92rem; padding: .3rem .8rem .3rem .4rem; border: 1px solid #4a4b52; border-radius: 99px; color: #8a8c93; }
 em { font-style: normal; display: grid; place-items: center; width: 1.5rem; height: 1.5rem; border-radius: 50%; border: 1px solid #4a4b52; font-size: .85rem; }
 span.done { color: #d8d9dd; border-color: #8a8c93; }
 span.done em { background: #4a4b52; color: #fff; border-color: #4a4b52; }

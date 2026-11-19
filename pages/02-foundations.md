@@ -3,13 +3,13 @@ layout: rsa-section
 transition: rsa-wipe
 ---
 
-<div class="part">Topic 1 of 8</div>
+<div class="part">Topic 2 of 10</div>
 
 # Foundations
 
 <p>The data model behind everything.</p>
 
-<Trail :at="1" />
+<Trail :at="2" />
 
 ---
 transition: slide-left
@@ -41,5 +41,6 @@ transition: rsa-flip
 <div class="card r"><h3>Resource-action</h3>Submit on Expense Report</div>
 <div class="card r"><h3>Application role</h3>A named group, may nest</div>
 <div class="card r"><h3>Role</h3>Defined in G&L, spans apps</div>
+<div v-click class="note" style="margin:0">An <b>orphan account</b> appears in no user access review, so nobody ever certifies it.</div>
 </div>
 </div>

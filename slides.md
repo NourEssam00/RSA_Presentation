@@ -23,6 +23,10 @@ layout: rsa-cover
 <p class="credit"><b>Submitted to</b> Dr. Mohamed Sobh</p>
 
 ---
+src: ./pages/00-case.md
+---
+
+---
 src: ./pages/01-overview.md
 ---
 

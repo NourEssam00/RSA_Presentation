@@ -1,6 +1,6 @@
 # RSA Governance & Lifecycle
 
-A 28-slide presentation built with [Slidev](https://sli.dev).
+A 46-slide presentation built with [Slidev](https://sli.dev).
 
 ## Requirements
 
@@ -33,7 +33,7 @@ npm run export   # PDF export (first run: npm i -D playwright-chromium)
 
 ```
 slides.md        Deck settings, cover slide, and the order of the topics
-pages/           One Markdown file per topic (01 to 10)
+pages/           00 is the business case, 01 the loop and modules, 02 to 09 one topic each, 10 takeaways and project plan
 components/      Animated diagrams and widgets used in the slides
 layouts/         Cover and topic-divider layouts
 style.css        Colors, fonts, and slide transitions

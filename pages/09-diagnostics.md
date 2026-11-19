@@ -3,13 +3,13 @@ layout: rsa-section
 transition: rsa-wipe
 ---
 
-<div class="part">Topic 8 of 8</div>
+<div class="part">Topic 9 of 10</div>
 
 # Diagnostics
 
 <p>Know what failed, and restart safely.</p>
 
-<Trail :at="8" />
+<Trail :at="9" />
 
 ---
 transition: slide-left
